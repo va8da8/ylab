@@ -20,9 +20,19 @@ public class Pell {
 
             int n = scanner.nextInt();
 
-            double p = ( ((Math.pow((1 + Math.sqrt(2)), n)) -
-                    (Math.pow((1 - Math.sqrt(2)), n))) / (2 * Math.sqrt(2)));
-            System.out.println((int) Math.ceil(p));
+//            double p = ( ((Math.pow((1 + Math.sqrt(2)), n)) -
+//                    (Math.pow((1 - Math.sqrt(2)), n))) / (2 * Math.sqrt(2)));
+//            System.out.println((int) Math.ceil(p));
+
+            int p_1 = 1, p_2 = 0, pn = 0;
+
+            for (int i = 1; i < n; i++) {
+                pn = 2 * p_1 + p_2;
+
+                p_2 = p_1;
+                p_1 = pn;
+            }
+            System.out.print(pn);
         }
     }
 }
