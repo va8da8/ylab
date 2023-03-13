@@ -27,8 +27,8 @@ public class Pell {
             int p_1 = 1, p_2 = 0, pn = 0;
 
             for (int i = 1; i < n; i++) {
-                pn = 2 * p_1 + p_2;
 
+                pn = 2 * p_1 + p_2;
                 p_2 = p_1;
                 p_1 = pn;
             }
